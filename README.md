@@ -1,16 +1,13 @@
 LibGDX Remote Stacktrace for Desktop and Android (iOS to be tested, WebGL not working)
 ===================================
-inspired by "Android Remote Stacktrace: Improved" of [Alex Pretzlav](https://github.com/Pretz)
+inspired by ["Android Remote Stacktrace: Improved"](https://github.com/Pretz/improved-android-remote-stacktrace) of [Alex Pretzlav](https://github.com/Pretz)
 
 
 
 ## Client side usage
 
-Download the latest `stacktrace.jar` file [found here](https://github.com/SimonPae/libgdx-stacktrace/blob/master/libs/stacktrace.jar)
+Download the latest `stacktrace.jar` file [found here](https://raw.githubusercontent.com/SimonPae/libgdx-stacktrace/master/libs/stacktrace.jar)
 or paste the GdxStackTraceSender.java to your project or paste the GdxStackTraceSender.java to a new project and add it as a dependency.
-
-![libs](http://paeusch.com/libgdx-stacktrace/libs.jpg)
-
 
 You must enable internet access for your android application:
 
@@ -36,6 +33,8 @@ At `http://your.domain/your-server-file.php` the client side implementation will
 ## Gradle Integration
 
 Create a `libs` folder in your core project as well as in your android project folder.
+Add the stacktrace.jar file to both libs folders.
+![libs](http://paeusch.com/libgdx-stacktrace/libs.jpg)
 Add to the build.gradle file of the root of the project
 in the project(":core") section under dependencies
 
@@ -46,6 +45,8 @@ as well as in the project(":android") section under dependencies
     compile fileTree(dir: 'libs', include: '*.jar')
     
 ![gradle-integration](http://paeusch.com/libgdx-stacktrace/gradle-integration.jpg)
+
+THIS IS NOT THE BEST SOLUTION, SINCE WE NEED TO COPY THE stacktraces.jar FILE TO TWO LIBS FOLDERS. IF YOU HAVE A SUGGESTION HOW TO ACHIEVE IT IN A SMARTER WAY, PLEASE TELL ME - I WILL ADD YOUR SOLUTION!
 
 ## Refresh Dependencies
 
