@@ -6,8 +6,10 @@ inspired by "Android Remote Stacktrace: Improved" of [Alex Pretzlav](https://git
 
 ## Client side usage
 
-Download the latest `stacktrace.jar` file [found here](https://github.com/downloads/SimonPae/libgdx-stacktrace/libs/stacktrace.jar)
+Download the latest `stacktrace.jar` file [found here](https://github.com/SimonPae/libgdx-stacktrace/blob/master/libs/stacktrace.jar)
 or paste the GdxStackTraceSender.java to your project or paste the GdxStackTraceSender.java to a new project and add it as a dependency.
+
+![libs](http://paeusch.com/libgdx-stacktrace/libs.jpg)
 
 
 You must enable internet access for your android application:
@@ -16,11 +18,14 @@ You must enable internet access for your android application:
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
+![internet-permission](http://paeusch.com/libgdx-stacktrace/internet-permission.jpg)
+
 In the create method of your core app (e.g. MyGdxGame.java), you must call either `public GdxStackTraceSender(String postUrl)` (for the default HTTP POST behavior and the default stacktrace file handle) or `public public GdxStackTraceSender(String postUrl, String path, String filename) to modify default stacktrace file path and filename.
 To store the stacktrace file on the device (to be able to send the stacktrace later - if no internet connection is available) the [local Gdx filehandle is used](https://github.com/libgdx/libgdx/wiki/File-handling#file-storage-types).
 
 ```java
 new GdxStackTraceSender("http://your.domain/your-server-file.php");
+```
 
 ## Server side installation
 
@@ -40,14 +45,19 @@ as well as in the project(":android") section under dependencies
 
     compile fileTree(dir: 'libs', include: '*.jar')
     
+![gradle-integration](http://paeusch.com/libgdx-stacktrace/gradle-integration.jpg)
 
 ## Refresh Dependencies
 
 Refresh dependencies of your projects (android, core) by selecting the two projects -> right click in eclipse -> Gradle -> Refresh all
+
+![eclipse-refresh](http://paeusch.com/libgdx-stacktrace/eclipse-refresh.jpg)
+
 or by using command line -> go to the root of your project -> 
 
 	gradlew -refresh-dependencies
 	
+![commandline](http://paeusch.com/libgdx-stacktrace/commandline.jpg)
     
 ## Support
 
