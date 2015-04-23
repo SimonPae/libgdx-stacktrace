@@ -1,5 +1,7 @@
-LibGDX Remote Stacktrace for Desktop and Android (iOS to be tested, WebGL not working)
+LibGDX Remote Stacktrace
 ===================================
+for Desktop and Android (iOS to be tested, WebGL not working)
+
 inspired by ["Android Remote Stacktrace: Improved"](https://github.com/Pretz/improved-android-remote-stacktrace) of [Alex Pretzlav](https://github.com/Pretz)
 
 
